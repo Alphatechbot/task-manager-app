@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+ {% block content %}
+
+                  <!-- Edit form (hidden by default) -->
+     <form method="post">
+    {% csrf_token %}
+    <div class="edit-form">
+        <label for="id_name">Name:</label>
+        {{ form.name }} <!-- Or the specific field you want -->
+    </div>
+    <button class="save-button" type="submit">Save</button>
+    <button class="cancel-button" onclick="window.location.href='{% url 'base:home' %}'" type="button">Cancel</button>
+</form>
+
+
+ {% endblock %}

@@ -1,0 +1,200 @@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 100px auto; /* Increase the top margin */
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        position: relative;
+    }
+
+    /* Profile section */
+    .profile {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .profile img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .profile-name {
+        font-size: 14px;
+        color: #333;
+    }
+
+    .login-form, .todo-list {
+        text-align: center;
+        margin-top: 60px; /* Adjusted to leave space for the profile */
+    }
+
+    .login-form h2, .todo-list h2 {
+        color: #333;
+    }
+
+    input[type="text"], input[type="password"], input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    input[type="submit"] {
+        background-color: #5cb85c;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #4cae4c;
+    }
+
+    .task {
+        padding: 15px;
+        background-color: #f9f9f9;
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .task-content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        font-size: 16px;
+        color: #333;
+        white-space: nowrap;  /* Prevents text from wrapping */
+        overflow: hidden;     /* Ensures the text stays in a single line */
+        text-overflow: ellipsis;  /* Adds ellipsis (...) for long text */
+        max-width: 60%; /* Limits the width to keep buttons aligned */
+    }
+
+    .task-time {
+        color: #888;
+        font-size: 12px;
+    }
+
+
+    /* Task buttons */
+    .task-button {
+        display: flex;
+        gap: 10px;  /* Adds space between the buttons */
+        justify-content: flex-end;
+        align-items: center;
+        min-width: 150px; /* Ensures the buttons are consistently placed */
+    }
+
+    .task button {
+        background-color: #d9534f;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .task button:hover {
+        background-color: #c9302c;
+    }
+
+    .task input[type="text"] {
+        flex: 1;
+        margin-right: 10px;
+        padding: 5px;
+    }
+
+    /* Edit and Delete buttons */
+    .edit-button, .delete-button {
+        background-color: #0275d8;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .delete-button {
+        background-color: #d9534f;
+    }
+
+    .edit-button:hover {
+        background-color: #025aa5;
+    }
+
+    .delete-button:hover {
+        background-color: #c9302c;
+    }
+
+    /* Edit form */
+    .edit-form {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .edit-form input[type="text"] {
+        width: 70%;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+    }
+
+    .save-button, .cancel-button {
+        background-color: #5cb85c;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .cancel-button {
+        background-color: #f0ad4e;
+    }
+
+    .save-button:hover {
+        background-color: #4cae4c;
+    }
+
+    .cancel-button:hover {
+        background-color: #ec971f;
+    }
+
+    .edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+    .edit-form input[type="text"] {
+        margin-bottom: 10px;
+        width: 100%; /* Adjust width if needed */
+    }
+
+    .edit-form {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-gap: 10px;
+}
+
+</style>

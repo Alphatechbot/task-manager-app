@@ -1,0 +1,11 @@
+    {% load static %}
+<!-- User Profile -->
+<!-- User Profile and Logout -->
+<div class="profile">
+    <img src="https://via.placeholder.com/40" alt="User Profile Picture">
+    <span class="profile-name"></span>
+    {% if request.user.is_authenticated %}
+     <span class="profile-name">{{ user.username|title }}</span>
+     <button class="logout-button" type="button" onclick="window.location.href='{% url 'base:logout' %}'">Logout</button>
+    {% endif %}
+</div>

@@ -1,0 +1,35 @@
+ <!-- To-Do List -->
+{% extends 'main.html' %}
+ {% block content %}
+    <!-- To-Do List -->
+
+    <!-- To-Do List -->
+
+    <div class="todo-list">
+        <h2>My To-Do List</h2>
+        <form method="POST" action="{% url 'base:home' %} ">
+            {% csrf_token %}
+            <input type="text" name="task" placeholder="Add a new task" >
+            <input type="submit" value="Add Task">
+        </form>
+
+        <ul>
+            <!-- Example Task List (Django will handle rendering dynamic tasks) -->
+            {% for task in todo %}
+            <li class="task">
+                <span>{{task.name}}</span>
+                 <span class="task-time">{{ task.created_at|date:"Y-m-d H:i" }}</span>
+                       <!-- Edit and Delete buttons -->
+                            <button class="edit-button" type="button" onclick="window.location.href='{{ task.get_absolute_url }}'">Edit</button>
+                            <button class="delete-button" type="button" onclick="window.location.href='{{ task.get_absolute_url1 }}'">Delete</button>
+
+            {% endfor %}
+                <!-- Edit and Delete buttons -->
+            </li>
+        </ul>
+
+
+    </div>
+
+
+ {% endblock %}
